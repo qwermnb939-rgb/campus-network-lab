@@ -11,7 +11,12 @@
 - `top`：实时看 CPU/内存；`P`/`M` 排序，`q` 退出
 - `free -h`：看整机内存还剩多少（看 available）
 - 坑：`ps aux | grep xxx` 会搜到 grep 自己
-systemd
+## systemd
+- `systemctl status 服务名`：看是否运行 + 最近日志
+- `systemctl is-active 服务名`：此刻活不活
+- `systemctl is-enabled 服务名`：开机启不启用
+- `systemctl start/stop/restart 服务名`：启停重启（生产先 status）
+- 日志入口：`journalctl -u 服务名 -n 50`（后面 Day9 细练）
 日志
 网络连通
 
